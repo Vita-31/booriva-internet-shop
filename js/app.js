@@ -1,18 +1,18 @@
 //open search
 const searchHeader = document.getElementById('header-search');
 
-if(searchHeader) {
-    const searchForm = searchHeader.querySelector('.action-form')
-    searchHeader.addEventListener('click', (e) => {
-        const searchBlock = e.target.closest('.action-search');
-        const closeSearch = e.target.closest('.action-form__close');
-        
-        if(searchBlock) {
-            searchHeader.classList.add('search-open')
-        }
+document.addEventListener('click', (e) => {
+    const searchBlock = e.target.closest('.action-search');
+    const closeSearch = e.target.closest('.action-form__close');
+    const searchForm = e.target.closest('.action-form');
 
-        if(closeSearch) {
-            searchHeader.classList.remove('search-open')
-        }
-    })
-}
+    if(searchForm || searchBlock) {
+        searchHeader.classList.add('search-open')
+    } else {
+        searchHeader.classList.remove('search-open')
+    }
+
+    if(closeSearch) {
+        searchHeader.classList.remove('search-open')
+    }
+}) 
