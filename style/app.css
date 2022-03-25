@@ -569,6 +569,44 @@ body {
         height: 13px;
     }
 
+    .action-form {
+        padding: 5px 0;
+    }
+
+    .action-form__search {
+        left: 0px;
+        padding: 9px 10px;
+        border-radius: 8px;
+    }
+
+    .action-form__close {
+        right: 2px;
+        padding: 8px;
+    }
+
+    .action-form__input {
+        padding: 5px 30px;
+        font-size: 12px;
+    }
+
+    .icon-search {
+        width: 13px;
+        height: 13px;
+    }
+
+    .icon-close {
+        width: 14px;
+        height: 14px;
+    }
+
+    .header__search.search-open .action-form {
+        bottom: -45px;
+    }
+
+    .header__search.search-open .action-search {
+        background-color: transparent;
+    }
+
     .action-search__text,
     .action-favorite,
     .action-cart {
