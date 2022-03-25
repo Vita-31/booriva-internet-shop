@@ -5,6 +5,9 @@
     --light-pink: #FFE6EF;
     --white: #FFFFFF;
     --silver: #909090;
+    --laptop: 1000px;
+    --tablet: 768px;
+    --mobile: 480px;
 }
 
 html,
@@ -69,6 +72,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .input {
@@ -96,6 +100,10 @@ body {
     display: flex;
     align-content: center;
     gap: 0 15px;
+}
+
+.contacts-header--mobile {
+    display: none;
 }
 
 .contacts-header__block {
@@ -232,8 +240,6 @@ body {
 }
 
 .action-favorite {
-    width: 20px;
-    height: 18px;
     padding: 5px;
     display: flex;
     align-items: center;
@@ -385,9 +391,9 @@ body {
 }
 
 .footer-nav__title {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 135%;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 120%;
     color: var(--red);
     font-family: 'Lobster', cursive;
 }
@@ -398,15 +404,11 @@ body {
 
 .footer-nav__item {
     margin-top: 10px;
+    color: var(--white);
 }
 
 .footer-nav__item:first-child {
     margin-top: 0;
-}
-
-.footer-nav__link,
-.footer-nav__text {
-    color: var(--white);
 }
 
 .footer-nav__link:hover {
@@ -422,6 +424,10 @@ body {
     gap: 0 16px;
 }
 
+.footer-social--mobile {
+    display: none;
+}
+
 .footer-social__item {
     display: flex;
     align-items: center;
@@ -434,3 +440,208 @@ body {
     display: flex;
 }
 /* footer end */
+
+/* @media screen and (max-width: 1000px) {
+    .header__top {
+        padding: 10px 0 25px;
+    }
+
+    .contacts-header {
+        flex-direction: column;
+        gap: 5px 0;
+    }
+
+    .contacts-header__place {
+        width: 15px;
+        height: 17px;
+    }
+
+    .contacts-header__phone {
+        width: 12px;
+        height: 18px;
+    }
+
+    .contacts-header__text,
+    .action-search__text {
+        font-size: 11px;
+        line-height: 120%;
+    }
+
+    .header__logo {
+        flex: 0 0 113px;
+        height: 28px;
+    }
+
+    .header__search {
+        margin-right: 40px;
+    }
+
+    .action-search {
+        gap: 0 10px;
+    }
+
+    .action-favorite {
+        padding: 4px 5px;
+    }
+
+    .action-favorite__img {
+        width: 16px;
+        height: 15px;
+    }
+
+    .action-cart {
+        margin-left: 50px;
+    }
+
+    .action-cart__img {
+        width: 14px;
+        height: 16px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .header__top {
+        padding-top: 5px;
+    }
+
+    .header__search {
+        margin-right: 30px;
+    }
+
+    .action-cart {
+        margin-left: 33px;
+    }
+
+    .header-nav__link {
+        font-size: 14px;
+    }
+} */
+
+@media screen and (min-width: 320px) {
+
+    .header__top {
+        padding: 10px 0 8px;
+    }
+
+    .header__logo {
+        flex: 0 0 69px;
+        height: 17px;
+    }
+    .header__nav {
+        display: none;
+    }
+
+    .contacts-header--desktop {
+        display: none;
+    }
+
+    .contacts-header--mobile {
+        display: flex;
+        align-items: center;
+        gap: 0 5px;
+    }
+
+    .contacts-header__phone {
+        width: 6px;
+        height: 9px;
+    }
+
+    .contacts-header__text {
+        font-size: 8px;
+        line-height: 120%;
+    }
+
+    .header__search {
+        margin-right: 0;
+    }
+
+    .action-search {
+        padding: 0;
+    }
+
+    .action-search:hover {
+        background-color: transparent;
+    }
+
+    .action-search__img {
+        width: 13px;
+        height: 13px;
+    }
+
+    .action-search__text,
+    .action-favorite,
+    .action-cart {
+        display: none;
+    }
+
+    .footer {
+        padding: 40px 0 42px;
+    }
+
+    .footer__container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px 0;
+    }
+
+    .footer__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer__logo {
+        display: none;
+    }
+
+    .footer-nav--social {
+        display: none;
+    }
+
+    .footer-nav__title {
+        font-size: 18px;
+    }
+
+    .footer-nav__item {
+        line-height: 12px;
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .footer-about {
+        gap: 0 20px;
+    }
+
+    .footer-about__img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .footer-about__block {
+        max-width: 100%;
+    }
+
+    .footer-about__send {
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    .footer-about__text {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .footer-social__img {
+        width: 12px;
+        height: 12px;
+    }
+
+
+    .footer-social {
+        margin-top: 10px;
+    }
+
+    .footer-social--mobile {
+        display: flex;
+    }
+}

@@ -19,7 +19,7 @@
         <header class="header">
             <div class="container">
                 <div class="header__top">
-                    <div class="header__contacts contacts-header">
+                    <div class="header__contacts contacts-header contacts-header--desktop">
                         <div class="contacts-header__block">
                             <img src="./img/icons/place.svg" alt="Place icon" class="contacts-header__place" width="1" height="1" decoding="async">
                             <p class="contacts-header__text">Киев, Нижний вал, 37</p>
@@ -31,6 +31,10 @@
                     </div>
                     <a href="/" class="header__logo" aria-label="Logo">
                         <img src="./img/icons/booriva-logo.svg" alt="Booriva" width="1" height="1" decoding="async">
+                    </a>
+                    <a href="tel:380638433471" class="contacts-header contacts-header--mobile" aria-label="+38 063 843 34 71">
+                        <img src="./img/icons/phone.svg" alt="Phone icon" class="contacts-header__phone" width="1" height="1" decoding="async">
+                        <p class="contacts-header__text">+38 063 843 34 71</p>
                     </a>
                     <div class="header__action action">
                         <div action="" class="header__search" id="header-search">
@@ -49,7 +53,7 @@
                             </form>
                         </div>
                         <a href="#" class="action-favorite">
-                            <img src="./img/icons/favorite.svg" class="action-favorite" alt="Favorite icon" width="1" height="1" decoding="async">
+                            <img src="./img/icons/favorite.svg" class="action-favorite__img" alt="Favorite icon" width="1" height="1" decoding="async">
                         </a>
                         <a href="#" class="action-cart">
                             <img src="./img/icons/cart.svg" class="action-cart__img" alt="Cart icon" width="1" height="1" decoding="async">
@@ -164,51 +168,65 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer__container">
-                    <a href="/" class="footer__logo">
-                        <img src="./img/icons/booriva-logo-red.svg" alt="Booriva Logo" width="1" height="1" decoding="async">
-                    </a>
-                    <div class="footer-nav">
-                        <h2 class="footer-nav__title">ИНФО</h2>
-                        <ul class="footer-nav__list">
-                            <li class="footer-nav__item">
-                                <a href="#" class="footer-nav__link">Контакты</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="#" class="footer-nav__link">Система лояльности</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="#" class="footer-nav__link">Обмен и возврат</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="#" class="footer-nav__link">Доставка и оплата</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-nav">
-                        <h2 class="footer-nav__title">НАШ АДРЕС</h2>
-                        <ul class="footer-nav__list">
-                            <li class="footer-nav__item">
-                                <p class="footer-nav__text">г.Киев, ул. Нижний Вал, 37</p>
-                            </li>
-                            <li class="footer-nav__item">
-                                <p class="footer-nav__text">Пн — Вс: с 11:00 до 21:00</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-nav">
-                        <h2 class="footer-nav__title">СОЦ.СЕТИ</h2>
-                        <ul class="footer-social">
-                            <li class="footer-social__item">
-                                <a href="#" class="footer-social__img" aria-label="Instagram">
-                                    <img src="./img/icons/instagram.svg" alt="instagram" width="1" height="1" decoding="async">
-                                </a>
-                            </li>
-                            <li class="footer-social__item">
-                                <a href="#" class="footer-social__img" aria-label="Facebook">
-                                    <img src="./img/icons/facebook.svg" alt="facebook" width="1" height="1" decoding="async">
-                                </a>
-                            </li>
-                        </ul>
+                    <div class="footer__wrapper">
+                        <a href="/" class="footer__logo">
+                            <img src="./img/icons/booriva-logo-red.svg" alt="Booriva Logo" width="1" height="1" decoding="async">
+                        </a>
+                        <div class="footer-nav">
+                            <h2 class="footer-nav__title">ИНФО</h2>
+                            <ul class="footer-nav__list">
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Контакты</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Система лояльности</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Обмен и возврат</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Доставка и оплата</a>
+                                </li>
+                            </ul>
+                            <ul class="footer-social footer-social--mobile">
+                                <li class="footer-social__item">
+                                    <a href="#" class="footer-social__img" aria-label="Instagram">
+                                        <img src="./img/icons/instagram.svg" alt="instagram" width="1" height="1" decoding="async">
+                                    </a>
+                                </li>
+                                <li class="footer-social__item">
+                                    <a href="#" class="footer-social__img" aria-label="Facebook">
+                                        <img src="./img/icons/facebook.svg" alt="facebook" width="1" height="1" decoding="async">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-nav">
+                            <h2 class="footer-nav__title">НАШ АДРЕС</h2>
+                            <ul class="footer-nav__list">
+                                <li class="footer-nav__item">
+                                    <p class="footer-nav__text">г.Киев, ул. Нижний Вал, 37</p>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <p class="footer-nav__text">Пн — Вс: с 11:00 до 21:00</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-nav footer-nav--social">
+                            <h2 class="footer-nav__title">СОЦ.СЕТИ</h2>
+                            <ul class="footer-social">
+                                <li class="footer-social__item">
+                                    <a href="#" class="footer-social__img" aria-label="Instagram">
+                                        <img src="./img/icons/instagram.svg" alt="instagram" width="1" height="1" decoding="async">
+                                    </a>
+                                </li>
+                                <li class="footer-social__item">
+                                    <a href="#" class="footer-social__img" aria-label="Facebook">
+                                        <img src="./img/icons/facebook.svg" alt="facebook" width="1" height="1" decoding="async">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="footer-about">
                         <img src="./img/footer-profile.png" class="footer-about__img" alt="User profile icon" width="1" height="1" decoding="async">
