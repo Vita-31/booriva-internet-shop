@@ -345,12 +345,6 @@ body {
     display: flex;
 }
 
-.footer-nav__img {
-    width: 20px;
-    height: 20px;
-    display: flex;
-}
-
 .footer__container {
     display: flex;
     justify-content: space-between;
@@ -380,12 +374,63 @@ body {
 
 .footer-about__send {
     margin-top: 20px;
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 18px;
     line-height: 135%;
     text-decoration-line: underline;
     text-underline-offset: 3px;
     color: var(--red);
     display: flex;
-    font-family: 'Sunday Best [rus by aLiNcE]';
+    font-family: 'Lobster', cursive;
+}
+
+.footer-nav__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 135%;
+    color: var(--red);
+    font-family: 'Lobster', cursive;
+}
+
+.footer-nav__list {
+    margin-top: 14px;
+}
+
+.footer-nav__item {
+    margin-top: 10px;
+}
+
+.footer-nav__item:first-child {
+    margin-top: 0;
+}
+
+.footer-nav__link,
+.footer-nav__text {
+    color: var(--white);
+}
+
+.footer-nav__link:hover {
+    color: var(--white);
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
+}
+
+.footer-social {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+}
+
+.footer-social__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-social__img {
+    width: 20px;
+    height: 20px;
+    display: flex;
 }
 /* footer end */
